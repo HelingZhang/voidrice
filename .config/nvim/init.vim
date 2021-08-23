@@ -30,6 +30,9 @@ set noruler
 set laststatus=0
 set noshowcmd
 
+" load snippets for latex and all
+autocmd FileType tex source ${XDG_CONFIG_HOME}/nvim/snippets.vim
+
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
