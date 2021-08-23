@@ -2,7 +2,18 @@
 *.alpha: 0.8
 
 !! Set a default font and font size as below:
-*.font: monospace:size=10
+*.font: monospace:size=12
+
+!! Larger fonts for 4k screen
+Xft.dpi: 192
+
+!! These might also be useful depending on your monitor and personal preference:
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
 /* name		dark	light */
 /* black	0	8 */
@@ -154,3 +165,103 @@
 /* *.background: .color0 */
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
+#define new0 #2E3440
+#define new1 #3B4252
+#define new2 #434C5E
+#define new3 #4C566A
+#define new4 #D8DEE9
+#define new5 #E5E9F0
+#define new6 #ECEFF4
+#define new7 #8FBCBB
+#define new8 #88C0D0
+#define new9 #81A1C1
+#define new10 #5E81AC
+#define new11 #BF616A
+#define new12 #D08770
+#define new13 #EBCB8B
+#define new14 #A3BE8C
+#define new15 #B48EAD
+
+/* *.foreground:   nord4 */
+/* *.background:   nord0 */
+/* *.cursorColor:  nord4 */
+/* *fading: 35 */
+/* *fadeColor: nord3 */
+
+/* *.color0: nord1 */
+/* *.color1: nord11 */
+/* *.color2: nord14 */
+/* *.color3: nord13 */
+/* *.color4: nord9 */
+/* *.color5: nord15 */
+/* *.color6: nord8 */
+/* *.color7: nord5 */
+/* *.color8: nord3 */
+/* *.color9: nord11 */
+/* *.color10: nord14 */
+/* *.color11: nord13 */
+/* *.color12: nord9 */
+/* *.color13: nord15 */
+/* *.color14: nord7 */
+/* *.color15: nord6 */
+
+/* !! new: */
+*.color0: #2E3440
+*.color1: #BF616A
+*.color2: #A3BE8C
+*.color3: #D08770
+*.color4: #458588
+*.color5: #B48EAD
+*.color6: #689d6a
+*.color7: #a89984
+*.color8: #928374
+*.color9: #fb4934
+*.color10: #A3BE8C
+*.color11: #EBCB8B
+*.color12: #83a598
+*.color13: #d3869b
+*.color14: #8ec07c
+*.color15: #ebdbb2
+*.color256: #2E3440
+*.color257: #ebdbb2
+
+
+/* #define nord0 #2E3440 */
+/* #define nord1 #3B4252 */
+/* #define nord2 #434C5E */
+/* #define nord3 #4C566A */
+/* #define nord4 #D8DEE9 */
+/* #define nord5 #E5E9F0 */
+/* #define nord6 #ECEFF4 */
+/* #define nord7 #8FBCBB */
+/* #define nord8 #88C0D0 */
+/* #define nord9 #81A1C1 */
+/* #define nord10 #5E81AC */
+/* #define nord11 #BF616A */
+/* #define nord12 #D08770 */
+/* #define nord13 #EBCB8B */
+/* #define nord14 #A3BE8C */
+/* #define nord15 #B48EAD */
+
+/* *.foreground:   nord4 */
+/* *.background:   nord0 */
+/* *.cursorColor:  nord4 */
+/* *fading: 35 */
+/* *fadeColor: nord3 */
+
+/* *.color0: nord1 */
+/* *.color1: nord11 */
+/* *.color2: nord14 */
+/* *.color3: nord13 */
+/* *.color4: nord9 */
+/* *.color5: nord15 */
+/* *.color6: nord8 */
+/* *.color7: nord5 */
+/* *.color8: nord3 */
+/* *.color9: nord11 */
+/* *.color10: nord14 */
+/* *.color11: nord13 */
+/* *.color12: nord9 */
+/* *.color13: nord15 */
+/* *.color14: nord7 */
+/* *.color15: nord6 */
