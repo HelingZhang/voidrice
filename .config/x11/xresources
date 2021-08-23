@@ -4,8 +4,10 @@
 !! Set a default font and font size as below:
 *.font: monospace:size=12
 
-!! Larger fonts for 4k screen
-Xft.dpi: 192
+/* !! Larger fonts for 4k screen */
+/* Xft.dpi: 192 */
+!! Larger fonts for laptop screen
+Xft.dpi: 120
 
 !! These might also be useful depending on your monitor and personal preference:
 Xft.autohint: 0
