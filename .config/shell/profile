@@ -152,9 +152,9 @@ Please run:
 and replace \`libxft\`. Afterwards, you may start the graphical server by running \`startx\`."
 fi
 
-# Switch escape and caps if tty and no passwd required:
-sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
-
 # Enable fzf on command line history search & autocompletion
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# Switch escape and caps if tty and no passwd required:
+sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
