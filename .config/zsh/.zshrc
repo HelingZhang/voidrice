@@ -79,3 +79,6 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 # enable fzf history search & fzf completion
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# set locale to prevent perl warning
+LANG=C

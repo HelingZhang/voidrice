@@ -2,6 +2,8 @@
 
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
+
+# Set locale for Chinese support
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN:en_US
 
