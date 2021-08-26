@@ -8,6 +8,10 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
@@ -37,6 +41,36 @@ set noshowcmd
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+" Autocomplete with deoplete
+    let g:deoplete#enable_at_startup = 1
+    " call deoplete#custom#option({'max_list': 5})
+    " inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    " Plugin key-mappings.
+    " Note It must be "imap" and "smap".  It uses <Plug> mappings.
+    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k>     <Plug>(neosnippet_expand_target)
+    " Automatically select the first item in the pop up menue
+    " inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+    "   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+    " inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+    " " SuperTab like snippets behavior.
+    " " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+    imap <expr><TAB>
+     " \ pumvisible() ? "\<C-n>" :
+     \ neosnippet#expandable_or_jumpable() ?
+     \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    " For conceal markers.
+    if has('conceal')
+      set conceallevel=2 concealcursor=niv
+    endif
+    " Enable customized snippets
+    let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
+
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -147,3 +181,23 @@ function! ToggleHiddenAll()
     endif
 endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
+" load snippets for latex and all
+autocmd FileType tex source ${XDG_CONFIG_HOME}/nvim/snippets.vim
+
+" set tab to be 4 spaces
+" filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Turn on backup option
+set backup
+" Where to store backups
+set backupdir=~/.local/backup//
+" Make backup before overwriting the current buffer
+set writebackup
+" Overwrite the original backup file
+set backupcopy=yes
+" Meaningful backup name, e.g. filename@2015-04-05.14:59
+au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
