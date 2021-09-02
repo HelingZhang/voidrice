@@ -6,10 +6,10 @@
 text/x-shellscript=text.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 application/x-bittorrent=torrent.desktop;
-x-scheme-handler/mailto=mail.desktop;
+x-scheme-handler/mailto=brave-browser.desktop
 text/plain=text.desktop;
 application/postscript=pdf.desktop;
-application/pdf=pdf.desktop;
+application/pdf=mupdf.desktop
 image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
