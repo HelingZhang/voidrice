@@ -17,6 +17,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'terryma/vim-multiple-cursors' # needed for vim snippets to work properly
 call plug#end()
 
 set title
