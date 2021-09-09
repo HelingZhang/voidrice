@@ -17,7 +17,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-Plug 'terryma/vim-multiple-cursors' # needed for vim snippets to work properly
+Plug 'terryma/vim-multiple-cursors' " needed for vim snippets to work properly
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set title
