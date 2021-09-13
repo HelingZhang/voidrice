@@ -1,0 +1,13 @@
+#!/bin/sh
+
+function create(){
+    python -m venv "$XDG_DATA_HOME/python/env/$1"
+}
+
+function activate(){
+    source "$XDG_DATA_HOME/python/env/$1/bin/activate"
+}
+
+function ls(){
+    ls $XDG_DATA_HOME/python/env/
+}
